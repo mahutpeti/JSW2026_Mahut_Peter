@@ -1,0 +1,39 @@
+:root {
+    --blue: rgb(3 114 197);
+    --darkblue: rgb(0 61 138);
+    --brown: rgb(94 60 38);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--blue);
+    color: var(--darkblue);
+}
+
+h1, h2, h3 {
+    font-family: 'Rubik Distressed', cursive;
+    font-weight: normal;
+}
+
+h2 {
+    font-variant: small-caps;
+}
+
+header {
+    height: 400px;
+    background:
+        linear-gradient(
+            rgba(94,60,38,0.8),
+            rgba(0,0,0,0.6)
+        ),
+        url('../img/banner.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
