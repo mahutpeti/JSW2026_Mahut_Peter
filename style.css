@@ -1,21 +1,25 @@
 :root {
-    --blue: rgb(3 114 197);
-    --darkblue: rgb(0 61 138);
-    --brown: rgb(94 60 38);
+    --kek: rgb(3, 114, 197);
+    --sotetkek: rgb(0, 61, 138);
+    --barna: rgb(94, 60, 38);
+    --feher: #fff;
+    --fekete: #000;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: var(--blue);
-    color: var(--darkblue);
+    background-color: var(--kek);
+    color: var(--sotetkek);
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .alcim {
     font-family: 'Rubik Distressed', cursive;
     font-weight: normal;
 }
@@ -25,15 +29,230 @@ h2 {
 }
 
 header {
-    height: 400px;
-    background:
-        linear-gradient(
-            rgba(94,60,38,0.8),
-            rgba(0,0,0,0.6)
-        ),
-        url('../img/banner.png') center/cover no-repeat;
+    background: linear-gradient(to bottom, rgba(94,60,38,0.8), rgba(0,0,0,0.6));
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 150px;
 }
 
+header h1 {
+    color: var(--feher);
+    font-size: 2rem;
+    text-align: center;
+}
+
+main {
+    background-color: var(--feher);
+    box-shadow: 0 4px 10px var(--sotetkek);
+    padding: 1.5rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (min-width: 750px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    main {
+        width: 80%;
+    }
+}
+
+.bevezeto {
+    margin-bottom: 1rem;
+}
+
+.kategoriak {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.kategoria {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background-color: rgba(0, 61, 138, 0.1);
+    color: var(--sotetkek);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.kategoria.aktiv {
+    background-color: var(--sotetkek);
+    color: var(--feher);
+}
+
+@media (min-width: 750px) {
+    .kategoriak {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-start;
+    }
+    .kategoria {
+        flex: 0 1 auto;
+    }
+}
+
+.kartyak {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 749px) {
+    .kartyak {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1199px) {
+    .kartyak {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .kartyak {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.kartya {
+    border: 1px solid var(--sotetkek);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 5s, box-shadow 5s;
+}
+
+.kartya:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 61, 138, 0.4);
+}
+
+.kep {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.kartya h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.kartya p {
+    font-size: 0.9rem;
+}
+.kartya .kep {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 4px;
+}
+
+body {
+    counter-reset: alcim;
+}
+
+.alcim:not(:first-of-type):not(:last-of-type) {
+    counter-increment: alcim;
+}
+
+.alcim:not(:first-of-type):not(:last-of-type)::before {
+    content: counter(alcim) ". ";
+    font-weight: normal;
+}
+
+.urlap-blokk {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--sotetkek);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type=submit] {
+    background-color: var(--sotetkek);
+    color: var(--feher);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+}
+
+button[type=submit]:hover {
+    opacity: 0.9;
+}
+
+dialog {
+    border: 2px solid var(--sotetkek);
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: var(--feher);
+    color: var(--sotetkek);
+    max-width: 400px;
+    margin: auto;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+dialog form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+dialog .bezaro {
+    background-color: var(--sotetkek);
+    color: var(--feher);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+dialog .bezaro:hover {
+    opacity: 0.9;
+}
+
+#dialogSzoveg {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: var(--sotetkek);
+    color: var(--feher);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
