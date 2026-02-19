@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csomag térkitöltő anyagok</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Csomag térkitöltő anyagok</h1>
+    </header>
+
+    <main>
+        <p class="bevezeto">A csomagolás során a térkitöltő anyag kiválasztása nemcsak a termék biztonsága, hanem a költséghatékonyság és a fenntarthatóság szempontjából is kulcsfontosságú.</p>
+
+        <h2 class="alcim">TÉRKITÖLTŐ ANYAGOK CSOPORTOSÍTÁSA</h2>
+
+        <div class="kategoriak">
+            <span class="kategoria aktiv" data-kat="osszes">Összes kategória</span>
+            <span class="kategoria" data-kat="muanyag">Műanyag alapú térkitöltők</span>
+            <span class="kategoria" data-kat="papir">Papír alapú térkitöltők</span>
+            <span class="kategoria" data-kat="bio">Fenntartható és bio megoldások</span>
+        </div>
+
+        <h2 class="alcim" data-kat="muanyag">MŰANYAG ALAPÚ TÉRKITÖLTŐK</h2>
+        <div class="kartyak" data-kat="muanyag">
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Légpárnás fólia (Buborékfólia)</h3>
+                <p>Kiváló ütéslenyelő, tekercsben kapható, így bármilyen méretre vágható.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Légpárnás fóliapárnák</h3>
+                <p>Géppel fújt, levegővel telt zacskók. Nagyon könnyűek, így nem növelik a szállítási költséget.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>EPE habfólia</h3>
+                <p>Puha, karcmentes védelmet nyújt, ideális elektronikai eszközökhöz vagy bútorokhoz.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Polisztirol „kukac” (Habcsipsz)</h3>
+                <p>Hagyományos megoldás, ami kitölti az üres tereket, de hajlamos az elmozdulásra a dobozon belül.</p>
+            </div>
+        </div>
+
+        <h2 class="alcim" data-kat="papir">PAPÍR ALAPÚ TÉRKITÖLTŐK</h2>
+        <div class="kartyak" data-kat="papir">
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Térkitöltő papír (Kraft papír)</h3>
+                <p>Gyűrt állapotban kiváló ütéscsillapító. Léteznek hozzá adagoló gépek is, de kézzel is formázható.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Selyempapír</h3>
+                <p>Elsősorban esztétikai célokra és karcolás elleni védelemre (pl. cipők, ruhák, ékszerek) használják.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Papírgyapot (Füzetelt papír)</h3>
+                <p>Cikkcakk alakúra vágott papírcsíkok. Gyakran használják ajándékkosarakhoz és prémium termékekhez.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Hullámkarton lemez/rács</h3>
+                <p>Erős tartást ad, gyakran használják törékeny üvegek elválasztására.</p>
+            </div>
+        </div>
+
+        <h2 class="alcim" data-kat="bio">FENNTARTHATÓ ÉS BIO MEGOLDÁSOK</h2>
+        <div class="kartyak" data-kat="bio">
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Bio térkitöltő kukac</h3>
+                <p>Keményítő alapú (általában kukorica), vízben maradéktalanul feloldódik és komposztálható.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Fagyapot</h3>
+                <p>Természetes faforgács, ami rusztikus megjelenést ad. Kiváló borosüvegekhez vagy biotermékekhez.</p>
+            </div>
+            <div class="kartya">
+                <div class="kep" style="background-color: #ccc;"></div>
+                <h3>Méhsejt szerkezetű papír</h3>
+                <p>Kihúzva 3D-s rácsot alkot, ami helyettesítheti a buborékfóliát.</p>
+            </div>
+        </div>
+
+        <section class="urlap-blokk">
+            <h2>MAXIMUM MENNYI TÉRKITÖLTŐRE LENNE SZÜKSÉGEM?</h2>
+            <form id="terfogatForm">
+                <div class="form-group">
+                    <label for="hossz">Hosszúság (cm):</label>
+                    <input type="number" id="hossz" name="hossz" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="szelesseg">Szélesség (cm):</label>
+                    <input type="number" id="szelesseg" name="szelesseg" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="magassag">Magasság (cm):</label>
+                    <input type="number" id="magassag" name="magassag" required min="1">
+                </div>
+                <button type="submit">Számolás</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Készítette: Mahut Péter</p>
+    </footer>
+
+    <dialog id="eredmenyDialog">
+        <form method="dialog">
+            <button class="bezaro">X</button>
+        </form>
+        <p id="dialogSzoveg"></p>
+    </dialog>
+
+    <script src="js.js"></script>
+</body>
+</html>
